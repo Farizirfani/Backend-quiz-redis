@@ -111,6 +111,14 @@ const quizController = {
         score = 0;
       }
 
+      const checkAnswer = await redis.get(`checkQuestion:${user._id}`);
+
+      if (checkAnswer === "true") {
+        return res.status(400).json({
+          message: "You already answered the question",
+        });
+      }
+
       // Check if the answer is correct
       await redis.set(`checkQuestion:${user._id}`, true);
 
