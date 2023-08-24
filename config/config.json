@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "freedb_farizirfani",
+    "password": "zDw&Hx2?Ex#!95k",
+    "database": "freedb_fullstack_db",
+    "host": "sql.freedb.tech",
+    "dialect": "mysql"
+  }
+}
